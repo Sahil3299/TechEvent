@@ -130,11 +130,13 @@
     
     // Get form data
     const formData = {
+      id: generateRegistrationId(),
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       college: document.getElementById('college').value,
-      track: document.getElementById('track').value
+      track: document.getElementById('track').value,
+      timestamp: new Date().toISOString()
     };
 
     // Simulate form submission
@@ -144,17 +146,60 @@
     submitBtn.disabled = true;
 
     setTimeout(() => {
+      // Store data in localStorage
+      saveRegistrationData(formData);
+      
       // Show success message
       document.getElementById('registration-form').style.display = 'none';
       document.getElementById('success-message').classList.add('show');
       
-      // Show toast notification
-      showToast(`Welcome ${formData.name}! You're registered for TechFest 2026!`);
+      // Show toast notification with registration ID
+      showToast(`Welcome ${formData.name}! Your Registration ID: ${formData.id}`);
+      
+      // Log to console for verification
+      console.log('Registration saved:', formData);
+      console.log('All registrations:', getAllRegistrations());
       
       // Reset button
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
     }, 1500);
+  }
+
+  // Generate unique registration ID
+  function generateRegistrationId() {
+    const prefix = 'TF2026';
+    const timestamp = Date.now().toString(36).toUpperCase();
+    const random = Math.random().toString(36).substring(2, 5).toUpperCase();
+    return `${prefix}-${timestamp}-${random}`;
+  }
+
+  // Save registration data to localStorage
+  function saveRegistrationData(data) {
+    // Get existing registrations from localStorage
+    let registrations = JSON.parse(localStorage.getItem('techfest_registrations')) || [];
+    
+    // Add new registration
+    registrations.push(data);
+    
+    // Save back to localStorage
+    localStorage.setItem('techfest_registrations', JSON.stringify(registrations));
+  }
+
+  // Get all registrations from localStorage
+  function getAllRegistrations() {
+    return JSON.parse(localStorage.getItem('techfest_registrations')) || [];
+  }
+
+  // Get registration count
+  function getRegistrationCount() {
+    return getAllRegistrations().length;
+  }
+
+  // Clear all registrations (for testing)
+  function clearAllRegistrations() {
+    localStorage.removeItem('techfest_registrations');
+    console.log('All registrations cleared');
   }
 
   // Highlight Card Info
