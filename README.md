@@ -7,7 +7,7 @@ This project represents a digital invitation and information hub for a fictional
 
 ## 🚀 Live Demo
 👉 Add your GitHub Pages link here after deployment  
-Example: https://sahil3299.github.io/TechEvent/
+Example: https://tech-event-eight.vercel.app/
 
 ---
 
@@ -75,7 +75,7 @@ This project was created to practice:
 Engineering Student | Aspiring Web Developer  
 
 - GitHub: https://github.com/Sahil3299  
-- LinkedIn: _Add your LinkedIn link here_
+- LinkedIn: https://www.linkedin.com/in/sahil-shinde-a30948329/
 
 ---
 
