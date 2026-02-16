@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechFest 2026 | India's Biggest Tech Festival</title>
+  <meta name="description" content="Join TechFest 2026 - India's biggest tech festival featuring hackathons, AI workshops, live concerts, and more!">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+<link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="logo">
+    <i class="fas fa-bolt"></i>
+    TechFest 2026
+  </div>
+  <ul id="nav-menu">
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#highlights" class="nav-link">Highlights</a></li>
+    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+    <li><a href="#register" class="nav-link">Register</a></li>
+  </ul>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>India's Biggest Tech Festival</h1>
+    <p class="tagline">Innovation • Coding • Music • Fun</p>
+    <div class="date-badge">
+      <i class="fas fa-calendar-alt"></i>
+      <span>25 March 2026 • Pune, India</span>
+    </div>
+    <button class="btn" onclick="openModal()">
+      <i class="fas fa-ticket-alt"></i>
+      Register Now
+    </button>
+    <div class="countdown" id="countdown">
+      <div class="countdown-item">
+        <span class="number" id="days">00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="countdown-item">
+        <span class="number" id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="countdown-item">
+        <span class="number" id="minutes">00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="countdown-item">
+        <span class="number" id="seconds">00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header fade-in">
+    <h2>About The Event</h2>
+    <p>TechFest 2026 is a grand celebration of technology, creativity, and innovation.</p>
+  </div>
+  <div class="about-content">
+    <div class="about-text fade-in">
+      <h3>Where Innovation Meets Celebration</h3>
+      <p>Join thousands of developers, designers, creators, and tech enthusiasts for an unforgettable experience. TechFest 2026 brings together the brightest minds for three days of workshops, competitions, live music, and networking opportunities.</p>
+      <p>Whether you're a seasoned developer or just starting your tech journey, there's something for everyone at TechFest 2026.</p>
+    </div>
+    <div class="about-stats fade-in">
+      <div class="stat-card">
+        <i class="fas fa-users icon"></i>
+        <span class="number">10K+</span>
+        <span class="label">Attendees</span>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-code icon"></i>
+        <span class="number">50+</span>
+        <span class="label">Hackathons</span>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-chalkboard-teacher icon"></i>
+        <span class="number">30+</span>
+        <span class="label">Workshops</span>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-trophy icon"></i>
+        <span class="number">$50K</span>
+        <span class="label">Prizes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <div class="section-header fade-in">
+    <h2>Event Highlights</h2>
+    <p>Experience the best of technology and entertainment combined</p>
+  </div>
+  <div class="grid">
+    <div class="card fade-in" onclick="showHighlightInfo('hackathon')">
+      <i class="fas fa-laptop-code icon"></i>
+      <h3>Hackathon</h3>
+      <p>24-hour coding marathon with amazing prizes. Build innovative solutions with your team.</p>
+      <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+    </div>
+    <div class="card fade-in" onclick="showHighlightInfo('ai')">
+      <i class="fas fa-robot icon"></i>
+      <h3>AI Workshops</h3>
+      <p>Learn from industry experts about Machine Learning, Deep Learning, and AI technologies.</p>
+      <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+    </div>
+    <div class="card fade-in" onclick="showHighlightInfo('concert')">
+      <i class="fas fa-music icon"></i>
+      <h3>Live Concert</h3>
+      <p>Enjoy performances by top artists and bands. Dance the night away!</p>
+      <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+    </div>
+    <div class="card fade-in" onclick="showHighlightInfo('food')">
+      <i class="fas fa-utensils icon"></i>
+      <h3>Food Festival</h3>
+      <p>Savor cuisines from around the world. A gastronomic adventure awaits!</p>
+      <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+    </div>
+    <div class="card fade-in" onclick="showHighlightInfo('startup')">
+      <i class="fas fa-rocket icon"></i>
+      <h3>Startup Expo</h3>
+      <p>Showcase your startup to investors. Network with founders and venture capitalists.</p>
+      <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+    </div>
+    <div class="card fade-in" onclick="showHighlightInfo('gaming')">
+      <i class="fas fa-gamepad icon"></i>
+      <h3>Gaming Zone</h3>
+      <p>Compete in esports tournaments. Experience the latest games and VR experiences.</p>
+      <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="section-header fade-in">
+    <h2>Event Schedule</h2>
+    <p>Three days of non-stop tech action</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"><i class="fas fa-flag"></i></div>
+      <div class="timeline-content">
+        <div class="time"><i class="fas fa-clock"></i> 10:00 AM</div>
+        <h3>Opening Ceremony</h3>
+        <p>Kick off TechFest 2026 with keynote speeches and special performances.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"><i class="fas fa-code"></i></div>
+      <div class="timeline-content">
+        <div class="time"><i class="fas fa-clock"></i> 11:00 AM</div>
+        <h3>Hackathon Begins</h3>
+        <p>The 24-hour coding challenge starts. Form teams and start building!</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"><i class="fas fa-robot"></i></div>
+      <div class="timeline-content">
+        <div class="time"><i class="fas fa-clock"></i> 2:00 PM</div>
+        <h3>AI Workshop Sessions</h3>
+        <p>Learn about the latest in Artificial Intelligence and Machine Learning.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"><i class="fas fa-utensils"></i></div>
+      <div class="timeline-content">
+        <div class="time"><i class="fas fa-clock"></i> 5:00 PM</div>
+        <h3>Food Festival Opens</h3>
+        <p>Take a break and enjoy delicious food from various cuisines.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"><i class="fas fa-music"></i></div>
+      <div class="timeline-content">
+        <div class="time"><i class="fas fa-clock"></i> 7:00 PM</div>
+        <h3>Live Music Concert</h3>
+        <p>Enjoy performances by popular artists and bands.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"><i class="fas fa-trophy"></i></div>
+      <div class="timeline-content">
+        <div class="time"><i class="fas fa-clock"></i> 10:00 PM</div>
+        <h3>Day 1 Closing</h3>
+        <p>Wrap up Day 1 with networking and informal discussions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="section-header fade-in">
+    <h2>Date & Location</h2>
+    <p>Mark your calendars and join us in Pune</p>
+  </div>
+  <div class="location-card fade-in">
+    <h3><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Pune, Maharashtra, India</h3>
+    <div class="location-info">
+      <div>
+        <i class="fas fa-calendar"></i>
+        <span>25-27 March 2026</span>
+      </div>
+      <div>
+        <i class="fas fa-clock"></i>
+        <span>10:00 AM - 10:00 PM</span>
+      </div>
+    </div>
+    <button class="btn" onclick="openModal()">
+      <i class="fas fa-ticket-alt"></i>
+      Register Now
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <i class="fas fa-bolt"></i> TechFest 2026
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#register">Register</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+    <div class="social">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <p class="copyright">© 2026 TechFest. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- REGISTRATION MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Register for TechFest 2026</h3>
+      <button class="modal-close" onclick="closeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <form id="registration-form" onsubmit="handleRegistration(event)">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="college">College/Organization</label>
+        <input type="text" id="college" name="college" placeholder="Enter your college or organization" required>
+      </div>
+      <div class="form-group">
+        <label for="track">Interested Track</label>
+        <select id="track" name="track" required>
+          <option value="">Select a track</option>
+          <option value="hackathon">Hackathon</option>
+          <option value="ai">AI/ML</option>
+          <option value="webdev">Web Development</option>
+          <option value="appdev">App Development</option>
+          <option value="gaming">Gaming</option>
+          <option value="general">General Attendee</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">
+        <i class="fas fa-paper-plane"></i>
+        Submit Registration
+      </button>
+    </form>
+    <div class="success-message" id="success-message">
+      <i class="fas fa-check-circle"></i>
+      <h4>Registration Successful!</h4>
+      <p>Thank you for registering for TechFest 2026. Check your email for confirmation details.</p>
+      <button class="btn" onclick="closeModal()" style="margin-top: 20px;">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+  <i class="fas fa-info-circle"></i>
+  <p id="toast-message">Notification message</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
