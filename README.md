@@ -6,8 +6,7 @@ This project represents a digital invitation and information hub for a fictional
 ---
 
 ## 🚀 Live Demo
-👉 Add your GitHub Pages link here after deployment  
-Example: https://tech-event-eight.vercel.app/
+ https://tech-event-eight.vercel.app/
 
 ---
 
