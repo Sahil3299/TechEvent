@@ -43,8 +43,7 @@ TechEvent/
 ---
 
 ## 📸 Screenshots
-_Add screenshots of your project UI here after uploading images to GitHub._
-
+ <img src="techevent.png">
 ---
 
 ## 🎯 Purpose of the Project
